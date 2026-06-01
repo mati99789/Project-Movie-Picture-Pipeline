@@ -80,7 +80,7 @@ jobs:
       - name: Build and push Docker image
         run: |
           docker build \
-            --build-arg REACT_APP_MOVIE_API_URL=http://localhost:5000 \
+            --build-arg REACT_APP_MOVIE_API_URL=http://a4339675057e043e3871bed6a1f134a7-1248037586.us-east-1.elb.amazonaws.com \
             -t ${{ secrets.ECR_FRONTEND }}:${{ github.sha }} .
           docker push ${{ secrets.ECR_FRONTEND }}:${{ github.sha }}
 
